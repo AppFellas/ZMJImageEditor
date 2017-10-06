@@ -22,11 +22,11 @@ Pod::Spec.new do |s|
   
    s.resource = [
      'ZMJImageEditor/Assets/*/*.png',
-     'ZMJImageEditor/Assets/*/*.{xib,storyboard}',
-     'ZMJImageEditor/Assets/*/*.{pdf,xcassets}',
-	 'ZMJImageEditor/Assets/*/*.{lproj}'
-	 
-     ]
+     'ZMJImageEditor/Assets/*/*.{pdf,xcassets}'
+	 ]
+   s.resources = [
+   	'ZMJImageEditor/Assets/*.{lproj}'
+     ]	 
 
    s.frameworks = 'UIKit', 'MapKit'
    s.dependency 'YYCategories', '~> 1.0.4'
