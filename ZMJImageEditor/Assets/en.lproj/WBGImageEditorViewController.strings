@@ -3,7 +3,7 @@
 "Li1-F3-HD7.normalTitle" = "Send";
 
 /* Class = "UIButton"; normalTitle = "返回"; ObjectID = "U1E-fP-iEK"; */
-"U1E-fP-iEK.normalTitle" = "Reset";
+"U1E-fP-iEK.normalTitle" = "Cancel";
 
 /* Class = "UIButton"; normalTitle = "撤销"; ObjectID = "yeV-aj-vVt"; */
-"yeV-aj-vVt.normalTitle" = "Cancel";
+"yeV-aj-vVt.normalTitle" = "Reset";
