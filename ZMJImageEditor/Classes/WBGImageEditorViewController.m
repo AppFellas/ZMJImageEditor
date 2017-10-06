@@ -72,7 +72,10 @@ NSString * const kColorPanNotificaiton = @"kColorPanNotificaiton";
 
 - (id)init
 {
-    self = [self initWithNibName:@"WBGImageEditorViewController" bundle:[NSBundle bundleForClass:self.class]];
+    NSBundle *podBundle = [NSBundle bundleForClass:[WBGImageEditorViewController class]];
+    id data = [podBundle URLForResource:@"ZMJImageEditor" withExtension:@"bundle"];
+    NSBundle *bundle = [NSBundle bundleWithURL:data];
+    self = [[WBGImageEditorViewController alloc]initWithNibName:@"WBGImageEditorViewController" bundle:bundle];
     if (self){
         
     }
