@@ -4,12 +4,12 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - Masonry (1.0.2)
+  - Masonry (1.1.0)
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
-  - ZMJImageEditor (0.1.7.2):
-    - Masonry (~> 1.0.1)
+  - ZMJImageEditor (0.1.7.3):
+    - Masonry (~> 1.1.0)
     - YYCategories (~> 1.0.4)
 
 DEPENDENCIES:
@@ -22,9 +22,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
-  ZMJImageEditor: e156bf98203a5b540cda469a0cbdb160fb23f791
+  ZMJImageEditor: 215e55c7e797556d46ea11b086ccda3d1bc45597
 
 PODFILE CHECKSUM: 3c1d7a8afef6c42e332459f25ea9f8fb135c636f
 

@@ -131,7 +131,8 @@
     _resetButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _resetButton.contentMode = UIViewContentModeCenter;
     _resetButton.enabled = NO;
-    [_resetButton setTitle:@"还原" forState:UIControlStateNormal];
+    _resetButton.accessibilityHint = NSLocalizedStringFromTableInBundle(@"Reset", @"TOCropViewControllerLocalizable", resourceBundle, nil);
+    [_resetButton setTitle:NSLocalizedStringFromTableInBundle(@"Reset", @"TOCropViewControllerLocalizable", resourceBundle, nil) forState:UIControlStateNormal];
     [_resetButton setTitleColor:[UIColor colorWithHexString:@"289BF0"] forState:UIControlStateNormal];
     [_resetButton setTitleColor:[UIColor lightTextColor] forState:UIControlStateDisabled];
     [_resetButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
