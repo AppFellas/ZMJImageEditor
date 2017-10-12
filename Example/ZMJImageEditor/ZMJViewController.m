@@ -41,7 +41,9 @@
 }
 
 - (void)imageEditorDidCancel:(WBGImageEditor *)editor {
-    
+    [editor.presentingViewController dismissViewControllerAnimated:YES completion:^{
+                                                            
+    }];
 }
 
 #pragma mark - WBGImageEditorDataSource
