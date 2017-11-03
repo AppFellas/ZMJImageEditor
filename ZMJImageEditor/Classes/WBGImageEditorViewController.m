@@ -113,6 +113,7 @@ NSString * const kColorPanNotificaiton = @"kColorPanNotificaiton";
     // Do any additional setup after loading the view from its nib.
     
     self.undoButton.hidden = YES;
+    [self.delegate imageWasEdited: NO];
     
     self.colorPan.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 60, 100, self.colorPan.bounds.size.width, self.colorPan.bounds.size.height);
     [self.view addSubview:_colorPan];
@@ -225,8 +226,10 @@ NSString * const kColorPanNotificaiton = @"kColorPanNotificaiton";
         _drawTool.drawToolStatus = ^(BOOL canPrev) {
             if (canPrev) {
                 weakSelf.undoButton.hidden = NO;
+                [self.delegate imageWasEdited: YES];
             } else {
                 weakSelf.undoButton.hidden = YES;
+                [self.delegate imageWasEdited: NO];
             }
         };
         _drawTool.drawingCallback = ^(BOOL isDrawing) {
@@ -546,6 +549,7 @@ NSString * const kColorPanNotificaiton = @"kColorPanNotificaiton";
     [self.drawTool drawLine];
     [_drawingView removeAllSubviews];
     self.undoButton.hidden = YES;
+    [self.delegate imageWasEdited:NO];
 }
 
 - (void)cropViewController:(TOCropViewController *)cropViewController didFinishCancelled:(BOOL)cancelled {
@@ -576,6 +580,7 @@ NSString * const kColorPanNotificaiton = @"kColorPanNotificaiton";
             self.panButton.selected = YES;
             if (self.drawTool.allLineMutableArray.count > 0) {
                 self.undoButton.hidden  = NO;
+                [self.delegate imageWasEdited:YES];
             }
         }
             break;
@@ -585,6 +590,7 @@ NSString * const kColorPanNotificaiton = @"kColorPanNotificaiton";
         {
             self.panButton.selected = NO;
             self.undoButton.hidden  = YES;
+            [self.delegate imageWasEdited: NO];
         }
             break;
         default:

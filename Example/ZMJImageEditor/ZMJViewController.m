@@ -46,6 +46,10 @@
     }];
 }
 
+-(void)imageWasEdited:(Boolean *)isEdited {
+    NSLog(@"image was edited %s", isEdited ? "true" : "false");
+};
+
 #pragma mark - WBGImageEditorDataSource
 - (NSArray<WBGMoreKeyboardItem *> *)imageItemsEditor:(WBGImageEditor *)editor {
     return @[
