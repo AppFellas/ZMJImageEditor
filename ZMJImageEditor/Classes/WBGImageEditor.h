@@ -30,7 +30,7 @@
 @optional
 - (void)imageEditor:(WBGImageEditor *)editor didFinishEdittingWithImage:(UIImage *)image;
 - (void)imageEditorDidCancel:(WBGImageEditor *)editor;
-- (void)imageWasEdited:(Boolean *)isEdited;
+- (void)imageWasEdited:(BOOL *)isEdited;
 @end
 
 @protocol WBGImageEditorDataSource <NSObject>
