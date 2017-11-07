@@ -672,10 +672,10 @@ NSString * const kColorPanNotificaiton = @"kColorPanNotificaiton";
             
             for (UIView *subV in drawingSubviews) {
                 if ([subV isKindOfClass:[WBGTextToolView class]]) {
+                    [self.delegate imageWasEdited:YES];
                     WBGTextToolView *textLabel = (WBGTextToolView *)subV;
                     //进入正常状态
                     [WBGTextToolView setInactiveTextView:textLabel];
-                    
                     //生成图片
                     __unused UIView *tes = textLabel.archerBGView;
                     UIImage *textImg = [self.class screenshot:textLabel.archerBGView orientation:UIDeviceOrientationPortrait usePresentationLayer:YES];
